@@ -21,4 +21,4 @@ npm run lint
 ```
 
 ### Plus d'informations
-Cette application est une application non officielle de génération d'attestation de déplacement dérogatoire et a été développé par Jérémy DEMANGE. Elle est disponible sous les termes de la licence MIT. L'application ne recueille aucune donnée personnelle sur serveur. Elle utilise uniquement le "local storage" de l'appareil.
+Cette application est une application non officielle de génération d'attestation de déplacement dérogatoire et a été développée par Jérémy DEMANGE. Elle est disponible sous les termes de la licence MIT. L'application ne recueille aucune donnée personnelle sur serveur. Elle utilise uniquement le "local storage" de l'appareil.
