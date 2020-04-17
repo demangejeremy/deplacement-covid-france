@@ -242,7 +242,7 @@ export default {
     codePostal: "",
   }),
 
-  updated() {
+  mounted() {
     this.prenom = localStorage.getItem("prenom");
     this.nom = localStorage.getItem("nom");
     this.dateNaissance = localStorage.getItem("dateNaissance");
@@ -304,6 +304,17 @@ export default {
       localStorage.setItem("adresse", this.adresse);
       localStorage.setItem("ville", this.ville);
       localStorage.setItem("codePostal", this.codePostal);
+      if (
+        this.prenom != "" &&
+        this.nom != "" &&
+        this.dateNaissance != "" &&
+        this.lieuNaissance != "" &&
+        this.adresse != "" &&
+        this.ville != "" &&
+        this.codePostal != ""
+      ) {
+        this.winView = true;
+      }
       // Alerte
       alert("Les modifications ont bien été prises en compte.");
       // Fermer le modal
