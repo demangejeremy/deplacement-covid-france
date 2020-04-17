@@ -102,106 +102,122 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row dense>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('travail')">
-          <v-card-title class="headline">
-            Déplacement pour le travail</v-card-title
-          >
+    <template v-if="winView">
+      <v-row dense>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('travail')">
+            <v-card-title class="headline">
+              Déplacement pour le travail</v-card-title
+            >
 
-          <v-card-subtitle
-            >Déplacements entre le domicile et le lieu d’exercice de l’activité
-            professionnelle, lorsqu'ils sont indispensables à l'exercice
-            d’activités ne pouvant être organisées sous forme de télétravail ou
-            déplacements professionnels ne pouvant être
-            différés.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('courses')">
-          <v-card-title class="headline">
-            Déplacement pour les achats</v-card-title
-          >
+            <v-card-subtitle
+              >Déplacements entre le domicile et le lieu d’exercice de
+              l’activité professionnelle, lorsqu'ils sont indispensables à
+              l'exercice d’activités ne pouvant être organisées sous forme de
+              télétravail ou déplacements professionnels ne pouvant être
+              différés.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('courses')">
+            <v-card-title class="headline">
+              Déplacement pour les achats</v-card-title
+            >
 
-          <v-card-subtitle
-            >Déplacements pour effectuer des achats de fournitures nécessaires à
-            l’activité professionnelle et des achats de première nécessité dans
-            des établissements dont les activités demeurent
-            autorisées.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row dense>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('sante')">
-          <v-card-title class="headline">
-            Déplacement pour motif de santé</v-card-title
-          >
+            <v-card-subtitle
+              >Déplacements pour effectuer des achats de fournitures nécessaires
+              à l’activité professionnelle et des achats de première nécessité
+              dans des établissements dont les activités demeurent
+              autorisées.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row dense>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('sante')">
+            <v-card-title class="headline">
+              Déplacement pour motif de santé</v-card-title
+            >
 
-          <v-card-subtitle
-            >Consultations et soins ne pouvant être assurés à distance et ne
-            pouvant être différés ; consultations et soins des patients atteints
-            d'une affection de longue durée.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('famille')">
-          <v-card-title class="headline">
-            Déplacement pour garde d'enfants</v-card-title
-          >
+            <v-card-subtitle
+              >Consultations et soins ne pouvant être assurés à distance et ne
+              pouvant être différés ; consultations et soins des patients
+              atteints d'une affection de longue durée.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('famille')">
+            <v-card-title class="headline">
+              Déplacement pour garde d'enfants</v-card-title
+            >
 
-          <v-card-subtitle
-            >Déplacements pour motif familial impérieux, pour l’assistance aux
-            personnes vulnérables ou la garde d’enfants.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row dense>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('sport')">
-          <v-card-title class="headline"> Déplacement bref</v-card-title>
+            <v-card-subtitle
+              >Déplacements pour motif familial impérieux, pour l’assistance aux
+              personnes vulnérables ou la garde d’enfants.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row dense>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('sport')">
+            <v-card-title class="headline"> Déplacement bref</v-card-title>
 
-          <v-card-subtitle
-            >Déplacements brefs, dans la limite d'une heure quotidienne et dans
-            un rayon maximal d'un kilomètre autour du domicile, liés soit à
-            l'activité physique individuelle des personnes, à l'exclusion de
-            toute pratique sportive collective et de toute proximité avec
-            d'autres personnes, soit à la promenade avec les seules personnes
-            regroupées dans un même domicile, soit aux besoins des animaux de
-            compagnie.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6">
-        <v-card color="#E84741" dark @click="depGenerate('judiciaire')">
-          <v-card-title class="headline">
-            Déplacement pour convocation judiciaire</v-card-title
-          >
-          <v-card-subtitle class="mb-4"
-            >Convocation judiciaire ou administrative.
-          </v-card-subtitle>
-          <br /><br /><br />
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row dense>
-      <v-col cols="12">
-        <v-card color="#E84741" dark @click="depGenerate('missions')">
-          <v-card-title class="headline">
-            Déplacement pour missions...</v-card-title
-          >
+            <v-card-subtitle
+              >Déplacements brefs, dans la limite d'une heure quotidienne et
+              dans un rayon maximal d'un kilomètre autour du domicile, liés soit
+              à l'activité physique individuelle des personnes, à l'exclusion de
+              toute pratique sportive collective et de toute proximité avec
+              d'autres personnes, soit à la promenade avec les seules personnes
+              regroupées dans un même domicile, soit aux besoins des animaux de
+              compagnie.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-card color="#E84741" dark @click="depGenerate('judiciaire')">
+            <v-card-title class="headline">
+              Déplacement pour convocation judiciaire</v-card-title
+            >
+            <v-card-subtitle class="mb-4"
+              >Convocation judiciaire ou administrative.
+            </v-card-subtitle>
+            <br /><br /><br />
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row dense>
+        <v-col cols="12">
+          <v-card color="#E84741" dark @click="depGenerate('missions')">
+            <v-card-title class="headline">
+              Déplacement pour missions...</v-card-title
+            >
 
-          <v-card-subtitle
-            >Participation à des missions d’intérêt général sur demande de
-            l’autorité administrative.</v-card-subtitle
-          >
-        </v-card>
-      </v-col>
-    </v-row>
+            <v-card-subtitle
+              >Participation à des missions d’intérêt général sur demande de
+              l’autorité administrative.</v-card-subtitle
+            >
+          </v-card>
+        </v-col>
+      </v-row>
+    </template>
+    <template v-else>
+      <div>
+        <p class="text-center mt-6">
+          <b>
+            Cliquez sur le bouton ci-haut pour poursuivre
+          </b>
+        </p>
+        <p class="text-center mt-4">
+          Veuillez modifier et compléter l'ensemble de vos données personnelles
+          avant de générer une attestation (toutes les données sont conservées
+          sur votre appareil)
+        </p>
+      </div>
+    </template>
   </v-container>
 </template>
 
@@ -212,6 +228,8 @@ export default {
   data: () => ({
     // Snackbar
     snackbar: false,
+    // Afficher les fenêtres
+    winView: false,
     // Dialogs
     dialog: false,
     // Formulaire
@@ -224,7 +242,7 @@ export default {
     codePostal: "",
   }),
 
-  mounted() {
+  updated() {
     this.prenom = localStorage.getItem("prenom");
     this.nom = localStorage.getItem("nom");
     this.dateNaissance = localStorage.getItem("dateNaissance");
@@ -232,6 +250,18 @@ export default {
     this.adresse = localStorage.getItem("adresse");
     this.ville = localStorage.getItem("ville");
     this.codePostal = localStorage.getItem("codePostal");
+
+    if (
+      this.prenom != "" &&
+      this.nom != "" &&
+      this.dateNaissance != "" &&
+      this.lieuNaissance != "" &&
+      this.adresse != "" &&
+      this.ville != "" &&
+      this.codePostal != ""
+    ) {
+      this.winView = true;
+    }
   },
 
   methods: {
@@ -253,6 +283,7 @@ export default {
         localStorage.setItem("ville", "");
         localStorage.setItem("codePostal", "");
         this.dialog = false;
+        this.winView = false;
       }
     },
     closeWindow() {
