@@ -1,24 +1,24 @@
-# deplacement-covid-france
+# Attestation de déplacement dérogatoire simplifiée (non officielle)
 
-## Project setup
+## Mise en place du projet
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilation et lancement du serveur de développement
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilation et construction pour générer une version production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Vérification, débogage et correction des fichiers
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Plus d'informations
+Cette application est une application non officielle de génération d'attestation de déplacement dérogatoire et a été développée par Jérémy DEMANGE. Elle est disponible sous les termes de la licence MIT. L'application ne recueille aucune donnée personnelle sur serveur. Elle utilise uniquement le "local storage" de l'appareil.
