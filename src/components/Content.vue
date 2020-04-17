@@ -250,7 +250,29 @@ export default {
     this.adresse = localStorage.getItem("adresse");
     this.ville = localStorage.getItem("ville");
     this.codePostal = localStorage.getItem("codePostal");
-
+    console.log("Test");
+    console.log(this.prenom);
+    if (this.prenom == undefined) {
+      this.prenom = "";
+    }
+    if (this.nom == undefined) {
+      this.nom = "";
+    }
+    if (this.dateNaissance == undefined) {
+      this.dateNaissance = "";
+    }
+    if (this.lieuNaissance == undefined) {
+      this.lieuNaissance = "";
+    }
+    if (this.adresse == undefined) {
+      this.adresse = "";
+    }
+    if (this.ville == undefined) {
+      this.ville = "";
+    }
+    if (this.codePostal == undefined) {
+      this.codePostal = "";
+    }
     if (
       this.prenom != "" &&
       this.nom != "" &&
