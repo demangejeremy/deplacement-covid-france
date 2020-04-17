@@ -1,5 +1,11 @@
 <template>
   <v-container>
+    <v-snackbar v-model="snackbar" color="error" :timeout="6000" :top="true">
+      L'attestation vient de se télécharger sur votre appareil.
+      <v-btn dark text @click="snackbar = false">
+        Fermer
+      </v-btn>
+    </v-snackbar>
     <v-dialog v-model="dialog" persistent max-width="600px">
       <v-card>
         <v-card-title>
@@ -204,6 +210,8 @@ import { GenererPDF } from "../generate/generate";
 
 export default {
   data: () => ({
+    // Snackbar
+    snackbar: false,
     // Dialogs
     dialog: false,
     // Formulaire
@@ -274,6 +282,7 @@ export default {
       // Sauvegarde en local de l'élément à sauvegarder
       localStorage.setItem("reasons", item);
       GenererPDF();
+      this.snackbar = true;
     },
   },
 };

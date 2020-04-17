@@ -76,10 +76,10 @@ async function generatePdf(reasons) {
   const address = localStorage.getItem("adresse");
   const town = localStorage.getItem("ville");
   const zipcode = localStorage.getItem("codePostal");
-  const datesortie = `${year}-${month}-${day}`;
-  const heuresortie = `${hour}:${minute}`;
-  const releaseHours = String(heuresortie).substring(0, 2);
-  const releaseMinutes = String(heuresortie).substring(3, 5);
+  // const datesortie = `${year}-${month}-${day}`;
+  // const heuresortie = `${hour}:${minute}`;
+  const releaseHours = String(creationHour).substring(0, 2);
+  const releaseMinutes = String(creationHour).substring(3, 5);
 
   const data = [
     `Cree le: ${creationDate} a ${creationHour}`,
@@ -87,7 +87,7 @@ async function generatePdf(reasons) {
     `Prenom: ${firstname}`,
     `Naissance: ${birthday} a ${lieunaissance}`,
     `Adresse: ${address} ${zipcode} ${town}`,
-    `Sortie: ${datesortie} a ${releaseHours}h${releaseMinutes}`,
+    `Sortie: ${creationDate} a ${releaseHours}h${releaseMinutes}`,
     `Motifs: ${reasons}`,
   ].join("; ");
 
@@ -143,7 +143,7 @@ async function generatePdf(reasons) {
 
   if (reasons !== "") {
     // Date sortie
-    drawText(`${datesortie}`, 92, 200);
+    drawText(`${creationDate}`, 92, 200);
     drawText(releaseHours, 200, 201);
     drawText(releaseMinutes, 220, 201);
   }
